@@ -25,7 +25,7 @@ export default function Home() {
         <>
             <section>
                 <div className="container min-vh-100">
-                    <h2 className="py-3">Lista dei film</h2>
+                    <h2 className="py-3">Videogiochi</h2>
                     <div className="row mb-5 g-3">
                         {games.map(game => (
                             <div key={game.id} className="col-lg-4 col-md-6 col-sm-12">
