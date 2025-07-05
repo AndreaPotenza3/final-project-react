@@ -34,6 +34,11 @@ export default function Home() {
                                     <img src={`${BASE_API}/images/${game.image}`} alt='' />
                                 </figure>
                                 <p>{game.description}</p>
+                                <div>
+                                    {game.platforms.map(platform => (
+                                        <div key={platform.id} className="badge bg-secondary me-1">{platform.name}</div>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>
