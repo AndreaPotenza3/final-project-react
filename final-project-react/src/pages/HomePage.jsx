@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Home() {
 
@@ -30,15 +31,16 @@ export default function Home() {
                         {games.map(game => (
                             <div key={game.id} className="col-lg-4 col-md-6 col-sm-12">
                                 {game.name}
-                                <figure>
+                                {/* <figure>
                                     <img src={`${BASE_API}/images/${game.image}`} alt='' />
-                                </figure>
+                                </figure> */}
                                 <p>{game.description}</p>
                                 <div>
                                     {game.platforms.map(platform => (
                                         <div key={platform.id} className="badge bg-secondary me-1">{platform.name}</div>
                                     ))}
                                 </div>
+                                <NavLink to={`/api/videogames/${game.id}`} className="btn btn-primary mt-2" >Dettaglio</NavLink>
                             </div>
                         ))}
                     </div>
