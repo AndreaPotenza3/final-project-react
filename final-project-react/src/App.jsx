@@ -4,6 +4,7 @@ import Home from './pages/HomePage'
 import GameDetails from './pages/GameDetailsPage'
 import './App.css'
 import GlobalContext from './Context/GlobalContext'
+import PlatformDetails from './pages/PlatformDetailsPage'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         {/* <Route element={<DefaultLayout />}> */}
         <Route path="/" element={<Home />} />
         <Route path="/api/videogames/:id" element={<GameDetails />} />
+        <Route path="/api/platforms/:id" element={<PlatformDetails />} />
         {/* </Route> */}
       </Routes>
     </BrowserRouter>
