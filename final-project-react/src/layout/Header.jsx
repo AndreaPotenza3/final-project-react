@@ -25,7 +25,7 @@ export default function Header() {
         <header className="bg-dark text-white">
 
             <ul className="navbar-nav ms-auto">
-                {platforms && platforms.map(platform => (
+                {platforms.map(platform => (
                     <li key={platform.id} className="nav-item">
                         <NavLink to={`/api/platforms/${platform.id}`}>{platform.name}</NavLink>
                     </li>
