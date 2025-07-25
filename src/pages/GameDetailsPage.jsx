@@ -25,14 +25,21 @@ export default function GameDetails() {
     return (
         <>
             {game ?
-                <div>
-                    <div>
-                        {game.name}
+                <div className="container">
+                    <div className="row">
+                        <h1 className="text-center my-3">
+                            {game.name}
+                        </h1>
+                        <img className="fixed-img-show" src={`http://localhost:8080/images/${game.image}`} alt={game.name} />
+                        <p className="my-3">{game.description}</p>
+                        <p><strong>Data di pubblicazione:</strong> {game.publicationDate}</p>
+                        <h3>Piattaforme supportate</h3>
+                        <ul>
+                            {game.platforms.map((platform) => (
+                                <li className="mx-4" key={platform.id}>{platform.name}</li>
+                            ))}
+                        </ul>
                     </div>
-                    <figure>
-                        <img src={`http://localhost:8080/images/${game.image}`} alt={game.name} />
-                    </figure>
-                    <p>{game.description}</p>
                 </div>
                 : ""}
         </>

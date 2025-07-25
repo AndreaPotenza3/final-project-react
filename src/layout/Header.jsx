@@ -24,7 +24,7 @@ export default function Header() {
     return (
         <header>
             <nav className="navbar navbar-expand-lg bg-light w-100 bg-dark text-white bg-opacity-75 px-3">
-                <NavLink className="nav-link px-1 plat-link" to="/api/videogames">Videogames</NavLink>
+                <NavLink className="nav-link plat-link" to="/api/videogames">Videogames</NavLink>
                 <div className="container-fluid">
                     <ul className="navbar-nav mx-auto">
                         {platforms && platforms.map(platform => (
