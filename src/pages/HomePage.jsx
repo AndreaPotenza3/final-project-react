@@ -33,7 +33,7 @@ export default function Home() {
         <>
             <div className="container">
                 <div className="row">
-                    <h1 className="text-center my-3">Tutti i Videogiochi</h1>
+                    <h1 className="text-center my-5">Tutti i Videogiochi</h1>
                     <div className='d-flex justify-content-end align-items-center'>
                         <form onSubmit={handleSearch} className="d-flex">
                             <input
@@ -43,7 +43,7 @@ export default function Home() {
                                 value={search}
                                 onChange={e => setSearch(e.target.value)}
                             />
-                            <button type="submit" className="btn btn-outline-dark">Cerca</button>
+                            <button type="submit" className="btn btn-dark">Cerca</button>
                         </form>
                     </div>
                     <div className="row mb-5 g-3">

@@ -30,11 +30,11 @@ export default function PlatformDetails() {
         <>
 
             <div className='container'>
-                <div className='row g-3 mb-2'>
-                    <h1 className='text-center'>
-                        {platform.name}
-                    </h1>
-                </div>
+
+                <h1 className='text-center my-5'>
+                    {platform.name}
+                </h1>
+
                 <div >
                     {platform.videogames && platform.videogames.length > 0 ? (
                         platform.videogames.map(videogame => (
