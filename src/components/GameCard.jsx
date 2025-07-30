@@ -18,7 +18,7 @@ export default function GameCard({ game }) {
 
     return (
         <div className="card h-100 p-0 bg-newdark border-0" onClick={handleClick}>
-            <img className="card-img-top fixed-img" src={`${BASE_API}/images/${image}`} alt='' />
+            <img className="card-img-top fixed-img" src={`${BASE_API}/img/${image}`} alt='' />
             <div className="card-body card-body-new text-white bg-opacity-75">
                 <h5 className="card-title mt-auto">{name}</h5>
                 <ul className="list-group list-group-horizontal flex-wrap">
