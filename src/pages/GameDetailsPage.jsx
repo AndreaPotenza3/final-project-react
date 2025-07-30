@@ -30,7 +30,7 @@ export default function GameDetails() {
                         <h1 className="text-center my-3">
                             {game.name}
                         </h1>
-                        <img className="fixed-img-show" src={`http://localhost:8080/images/${game.image}`} alt={game.name} />
+                        <img className="fixed-img-show" src={`http://localhost:8080/img/${game.image}`} alt={game.name} />
                         <p className="my-3">{game.description}</p>
                         <p><strong>Data di pubblicazione:</strong> {game.publicationDate}</p>
                         <h3>Piattaforme supportate</h3>
