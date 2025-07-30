@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 
 export default function GameDetails() {
 
@@ -36,10 +36,11 @@ export default function GameDetails() {
                         <h3>Piattaforme supportate</h3>
                         <ul>
                             {game.platforms.map((platform) => (
-                                <li className="mx-4" key={platform.id}>{platform.name}</li>
+                                <li className="mx-4 p-1" key={platform.id}>{platform.name}</li>
                             ))}
                         </ul>
                     </div>
+                    <NavLink className='btn btn-primary' to={'/api/videogames'}>Torna alla lista</NavLink>
                 </div>
                 : ""}
         </>

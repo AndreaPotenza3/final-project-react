@@ -1,6 +1,7 @@
 import { useParams } from 'react-router'
 import axios from "axios"
 import { useState, useEffect } from "react"
+import GameCard from '../components/GameCard'
 
 export default function PlatformDetails() {
     const { id } = useParams()
@@ -21,20 +22,30 @@ export default function PlatformDetails() {
         fetchPlatform()
     }, [id])
 
+    if (!platform) {
+        return <div className="text-center fs-3 mt-5">Caricamento piattaforma...</div>
+    }
+
     return (
         <>
-            {platform ?
-                <div>
-                    <div>
+
+            <div className='container'>
+                <div className='row g-3 mb-2'>
+                    <h1 className='text-center'>
                         {platform.name}
-                    </div>
-                    <div>
-                        {platform.videogames.map(videogame => (
-                            <div key={videogame.id} className="badge bg-secondary me-1">{videogame.name}</div>
-                        ))}
-                    </div>
+                    </h1>
                 </div>
-                : ""}
+                <div >
+                    {platform.videogames && platform.videogames.length > 0 ? (
+                        platform.videogames.map(videogame => (
+                            <div key={videogame.id} className="badge bg-secondary col-4"><GameCard game={videogame} /></div>
+                        ))
+                    ) : (
+                        <div className="text-center fs-3 mt-5">Non ci sono giochi disponibili per questa piattaforma!</div>
+                    )}
+                </div>
+            </div>
+
         </>
     )
 }

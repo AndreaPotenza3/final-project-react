@@ -12,6 +12,9 @@ export default function GameCard({ game }) {
         navigate(`/api/videogames/${id}`)
     }
 
+    if (!platforms) {
+        console.warn("No platforms available for this game:", name)
+    }
 
     return (
         <div className="card h-100 p-0 bg-secondary" onClick={handleClick}>
@@ -19,7 +22,7 @@ export default function GameCard({ game }) {
             <div className="card-body card-body-new text-white bg-opacity-75">
                 <h5 className="card-title mt-auto">{name}</h5>
                 <ul className="list-group list-group-horizontal flex-wrap">
-                    {platforms.map(platform => (
+                    {platforms?.map(platform => (
                         <li key={platform.id} className="list-group-item">{platform.name}</li>
                     ))}
                 </ul>
