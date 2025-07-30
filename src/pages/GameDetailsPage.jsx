@@ -40,7 +40,7 @@ export default function GameDetails() {
                             ))}
                         </ul>
                     </div>
-                    <NavLink className='btn btn-primary' to={'/api/videogames'}>Torna alla lista</NavLink>
+                    <NavLink className='btn btn-outline-dark' to={'/api/videogames'}>Torna alla lista</NavLink>
                 </div>
                 : ""}
         </>
